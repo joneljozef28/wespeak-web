@@ -117,10 +117,10 @@ const SpeakerAvailabilityCalendar: React.FC<SpeakerAvailabilityCalendarProps> = 
                   day_disabled: "opacity-50",
                 }}
                 components={{
-                  Day: ({ date, ...props }) => {
+                  Day: ({ date }) => {
                     const customProps = renderDay(date, viewOption);
                     return (
-                      <div {...props} className={cn(props.className, customProps.className)}>
+                      <div className={customProps.className}>
                         {format(date, 'd')}
                       </div>
                     );
